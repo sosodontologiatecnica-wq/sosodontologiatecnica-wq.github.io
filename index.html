@@ -1,150 +1,142 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
+  <meta charset="UTF-8">
   <title>SOS Odontologia Técnica</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
-  body {
-    margin: 0;
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background: #eef2f7;
-    color: #333;
-  }
-
-  header {
-    background: #004aad;
-    padding: 15px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  }
-
-  .nav {
-    max-width: 1100px;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .nav a {
-    color: white;
-    text-decoration: none;
-    margin-left: 18px;
-    font-weight: 500;
-  }
-
-  .nav a:hover {
-    opacity: 0.8;
-  }
-
-  .hamburger {
-    font-size: 26px;
-    cursor: pointer;
-  }
-
-  .container {
-    max-width: 1000px;
-    margin: 30px auto;
-    background: white;
-    padding: 40px 25px;
-    border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-  }
-
-  .logo {
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    object-fit: cover;
-    display: block;
-    margin: auto;
-    border: 4px solid #004aad;
-  }
-
-  h1, h2 {
-    color: #004aad;
-    text-align: center;
-    margin-bottom: 15px;
-  }
-
-  p {
-    text-align: center;
-    font-size: 18px;
-    line-height: 1.6;
-  }
-
-  .botao {
-    background: linear-gradient(135deg, #25D366, #1ebe5d);
-    color: white;
-    padding: 15px 35px;
-    border-radius: 50px;
-    text-decoration: none;
-    display: inline-block;
-    margin-top: 25px;
-    font-weight: bold;
-  }
-
-  .botao:hover {
-    opacity: 0.9;
-  }
-
-  /* MOBILE */
-  @media (max-width: 700px) {
-    .menu {
-      display: none;
-      flex-direction: column;
-      background: #004aad;
-      width: 100%;
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #eef2f7;
+      color: #333;
     }
 
-    .menu.active {
+    header {
+      background: #004aad;
+      padding: 15px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .nav {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 18px;
+      font-weight: 500;
+    }
+
+    .hamburger {
+      font-size: 26px;
+      cursor: pointer;
+      color: white;
+      display: none;
+    }
+
+    .menu {
       display: flex;
     }
 
-    .menu a {
-      padding: 12px 0;
+    .container {
+      max-width: 1000px;
+      margin: 30px auto;
+      background: white;
+      padding: 40px 25px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    }
+
+    .logo {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      margin: auto;
+      border: 4px solid #004aad;
+    }
+
+    h1, h2 {
+      color: #004aad;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    p {
+      text-align: center;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .botao {
+      background: linear-gradient(135deg, #25D366, #1ebe5d);
+      color: white;
+      padding: 15px 35px;
+      border-radius: 50px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 25px;
+      font-weight: bold;
+    }
+
+    .servicos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .card {
+      background: #f9fbff;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.05);
       text-align: center;
     }
-  }
-    .servicos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  margin-top: 30px;
-}
-    
-.card {
-  background: #f9fbff;
-  border-radius: 12px;
-  padding: 25px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.05);
-  text-align: center;
-}
 
-.card h3 {
-  color: #004aad;
-  margin-bottom: 10px;
-}
-
-.card p {
-  font-size: 16px;
-}
+    .card h3 {
+      color: #004aad;
+      margin-bottom: 10px;
+    }
 
     .sobre {
-  background: #f9fbff;
-  padding: 35px 25px;
-  border-radius: 12px;
-  margin-top: 40px;
-}
+      background: #f9fbff;
+      padding: 35px 25px;
+      border-radius: 12px;
+      margin-top: 40px;
+    }
 
-.sobre p {
-  max-width: 800px;
-  margin: auto;
-  font-size: 18px;
-  line-height: 1.7;
-}
+    /* MOBILE */
+    @media (max-width: 700px) {
+      .hamburger {
+        display: block;
+      }
 
-</style>
+      .menu {
+        display: none;
+        flex-direction: column;
+        background: #004aad;
+        width: 100%;
+        text-align: center;
+      }
+
+      .menu.active {
+        display: flex;
+      }
+
+      .menu a {
+        padding: 12px 0;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -165,9 +157,9 @@
 </header>
 
 <section id="inicio" class="container">
-  <img src="logo.jpg" class="logo">
+  <img src="logo.jpg" class="logo" alt="Logo">
   <h1>SOS Odontologia Técnica</h1>
-  <p>Assistência técnica especializada</p>
+  <p>Assistência técnica especializada em equipamentos odontológicos</p>
 </section>
 
 <section id="servicos" class="container">
@@ -191,29 +183,18 @@
 
     <div class="card">
       <h3>Atendimento Rápido</h3>
-      <p>Suporte ágil para não parar seus atendimentos.</p>
+      <p>Suporte ágil para não interromper seus atendimentos.</p>
     </div>
   </div>
 </section>
 
-  
 <section id="sobre" class="container sobre">
   <h2>Sobre Nós</h2>
   <p>
-    Somos a <strong>SOS Odontologia Técnica</strong>, especializada em
-    manutenção, conserto e suporte técnico em equipamentos odontológicos.
-    Trabalhamos com agilidade, transparência e compromisso para garantir
-    que seu consultório funcione sem interrupções.
+    Somos a <strong>SOS Odontologia Técnica</strong>, especializada em manutenção,
+    conserto e suporte técnico em equipamentos odontológicos.
+    Atuamos com agilidade, transparência e compromisso.
   </p>
-</section>
-
-  <h2>Serviços</h2>
-  <p>Manutenção • Conserto • Preventiva</p>
-</section>
-
-<section id="sobre" class="container">
-  <h2>Sobre</h2>
-  <p>Atendimento rápido e profissional</p>
 </section>
 
 <section id="contato" class="container" style="text-align:center;">
@@ -231,10 +212,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
-

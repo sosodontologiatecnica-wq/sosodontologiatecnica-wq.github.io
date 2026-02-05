@@ -1,41 +1,66 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Meu site responsivo</title>
+  <title>SOS Odontologia Técnica</title>
 
-  <!-- ISSO É O MAIS IMPORTANTE -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
     body {
       margin: 0;
-      background-color: #f2f2f2;
       font-family: Arial, sans-serif;
-      text-align: center;
+      background-color: #f2f2f2;
     }
 
+    /* MENU */
+    header {
+      background-color: #0056b3;
+      padding: 15px;
+    }
+
+    nav {
+      max-width: 1000px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* CONTEÚDO */
     .container {
       max-width: 900px;
       margin: auto;
-      padding: 20px;
       background: white;
+      padding: 30px;
     }
 
-    img {
-  width: 200px;
-  max-width: 100%;
-  border-radius: 50%;
-  border: 4px solid #0056b3;
-  padding: 5px;
-  background: white;
-}
+    .logo {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      margin: 20px auto;
+    }
 
-
-    h1 {
+    h1, h2 {
       color: #0056b3;
+      text-align: center;
     }
 
     p {
+      text-align: center;
       font-size: 18px;
       color: #333;
     }
@@ -50,40 +75,56 @@
       margin-top: 20px;
     }
 
-    /* RESPONSIVO */
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 24px;
-      }
-
-      p {
-        font-size: 16px;
-      }
-
-      img {
-        width: 150px;
-      }
+    .center {
+      text-align: center;
     }
   </style>
-
 </head>
+
 <body>
 
-  <div class="container">
+  <!-- MENU -->
+  <header>
+    <nav>
+      <strong style="color:white;">SOS Odonto</strong>
+      <div>
+        <a href="#inicio">Início</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#contato">Contato</a>
+      </div>
+    </nav>
+  </header>
 
-    <img src="logo.jpg" alt="Logo">
+  <!-- INÍCIO -->
+  <section id="inicio" class="container">
+    <img src="logo.jpg" class="logo" alt="Logo">
+    <h1>SOS Odontologia Técnica</h1>
+    <p>Assistência técnica especializada em equipamentos odontológicos</p>
+  </section>
 
-    <h1>Assistência Técnica</h1>
-    <p>Conserto e manutenção com qualidade</p>
+  <!-- SERVIÇOS -->
+  <section id="servicos" class="container">
+    <h2>Serviços</h2>
+    <p>Manutenção • Conserto • Preventiva • Atendimento rápido</p>
+  </section>
 
+  <!-- SOBRE -->
+  <section id="sobre" class="container">
+    <h2>Sobre Nós</h2>
+    <p>Profissionais qualificados, atendimento ágil e compromisso com qualidade.</p>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contato" class="container center">
+    <h2>Contato</h2>
     <a 
       class="botao" 
       href="https://wa.me/5511999999999" 
       target="_blank">
       Falar no WhatsApp
     </a>
-
-  </div>
+  </section>
 
 </body>
 </html>

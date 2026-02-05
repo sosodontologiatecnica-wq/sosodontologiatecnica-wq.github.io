@@ -136,6 +136,34 @@
         padding: 12px 0;
       }
     }
+
+<style>
+  /* todo o seu CSS que já existe */
+
+  .whatsapp-fixo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    text-decoration: none;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    z-index: 999;
+  }
+
+  .whatsapp-fixo:hover {
+    opacity: 0.9;
+  }
+</style>
+
+    
   </style>
 </head>
 
@@ -204,6 +232,19 @@
   </a>
 </section>
 
+  </section>
+
+<a
+  href="https://wa.me/5511999999999"
+  class="whatsapp-fixo"
+  target="_blank"
+>
+  🟢
+</a>
+
+</body>
+</html>
+
 <script>
   function toggleMenu() {
     document.getElementById("menu").classList.toggle("active");
@@ -212,3 +253,4 @@
 
 </body>
 </html>
+

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Meu site responsivo</title>
+
+  <!-- ISSO É O MAIS IMPORTANTE -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      background-color: #f2f2f2;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+      background: white;
+    }
+
+    img {
+  width: 200px;
+  max-width: 100%;
+  border-radius: 50%;
+  border: 4px solid #0056b3;
+  padding: 5px;
+  background: white;
+}
+
+
+    h1 {
+      color: #0056b3;
+    }
+
+    p {
+      font-size: 18px;
+      color: #333;
+    }
+
+    .botao {
+      background-color: #25D366;
+      color: white;
+      padding: 15px 30px;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 20px;
+    }
+
+    /* RESPONSIVO */
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 24px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+
+      img {
+        width: 150px;
+      }
+    }
+  </style>
+
+</head>
+<body>
+
+  <div class="container">
+
+    <img src="logo.jpg" alt="Logo">
+
+    <h1>Assistência Técnica</h1>
+    <p>Conserto e manutenção com qualidade</p>
+
+    <a 
+      class="botao" 
+      href="https://wa.me/5511999999999" 
+      target="_blank">
+      Falar no WhatsApp
+    </a>
+
+  </div>
+
+</body>
+</html>

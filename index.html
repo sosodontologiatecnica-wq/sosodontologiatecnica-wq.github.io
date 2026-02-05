@@ -2,23 +2,21 @@
 <html>
 <head>
   <title>SOS Odontologia Técnica</title>
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #f2f2f2;
+      background: #f2f2f2;
     }
 
-    /* MENU */
     header {
-      background-color: #0056b3;
+      background: #0056b3;
       padding: 15px;
     }
 
-    nav {
+    .nav {
       max-width: 1000px;
       margin: auto;
       display: flex;
@@ -26,23 +24,30 @@
       align-items: center;
     }
 
-    nav a {
+    .nav a {
       color: white;
       text-decoration: none;
       margin-left: 15px;
       font-weight: bold;
     }
 
-    nav a:hover {
-      text-decoration: underline;
+    .menu {
+      display: flex;
     }
 
-    /* CONTEÚDO */
+    .hamburger {
+      display: none;
+      font-size: 26px;
+      color: white;
+      cursor: pointer;
+    }
+
     .container {
       max-width: 900px;
       margin: auto;
       background: white;
       padding: 30px;
+      margin-top: 20px;
     }
 
     .logo {
@@ -51,7 +56,7 @@
       border-radius: 50%;
       object-fit: cover;
       display: block;
-      margin: 20px auto;
+      margin: auto;
     }
 
     h1, h2 {
@@ -62,11 +67,10 @@
     p {
       text-align: center;
       font-size: 18px;
-      color: #333;
     }
 
     .botao {
-      background-color: #25D366;
+      background: #25D366;
       color: white;
       padding: 15px 30px;
       border-radius: 8px;
@@ -75,56 +79,76 @@
       margin-top: 20px;
     }
 
-    .center {
-      text-align: center;
+    /* MOBILE */
+    @media (max-width: 700px) {
+      .menu {
+        display: none;
+        flex-direction: column;
+        background: #0056b3;
+        width: 100%;
+      }
+
+      .menu a {
+        margin: 10px 0;
+        text-align: center;
+      }
+
+      .hamburger {
+        display: block;
+      }
+
+      .menu.active {
+        display: flex;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <!-- MENU -->
-  <header>
-    <nav>
-      <strong style="color:white;">SOS Odonto</strong>
-      <div>
-        <a href="#inicio">Início</a>
-        <a href="#servicos">Serviços</a>
-        <a href="#sobre">Sobre</a>
-        <a href="#contato">Contato</a>
-      </div>
-    </nav>
-  </header>
+<header>
+  <div class="nav">
+    <strong style="color:white;">SOS Odonto</strong>
 
-  <!-- INÍCIO -->
-  <section id="inicio" class="container">
-    <img src="logo.jpg" class="logo" alt="Logo">
-    <h1>SOS Odontologia Técnica</h1>
-    <p>Assistência técnica especializada em equipamentos odontológicos</p>
-  </section>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
 
-  <!-- SERVIÇOS -->
-  <section id="servicos" class="container">
-    <h2>Serviços</h2>
-    <p>Manutenção • Conserto • Preventiva • Atendimento rápido</p>
-  </section>
+    <div class="menu" id="menu">
+      <a href="#inicio">Início</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
+    </div>
+  </div>
+</header>
 
-  <!-- SOBRE -->
-  <section id="sobre" class="container">
-    <h2>Sobre Nós</h2>
-    <p>Profissionais qualificados, atendimento ágil e compromisso com qualidade.</p>
-  </section>
+<section id="inicio" class="container">
+  <img src="logo.jpg" class="logo">
+  <h1>SOS Odontologia Técnica</h1>
+  <p>Assistência técnica especializada</p>
+</section>
 
-  <!-- CONTATO -->
-  <section id="contato" class="container center">
-    <h2>Contato</h2>
-    <a 
-      class="botao" 
-      href="https://wa.me/5511999999999" 
-      target="_blank">
-      Falar no WhatsApp
-    </a>
-  </section>
+<section id="servicos" class="container">
+  <h2>Serviços</h2>
+  <p>Manutenção • Conserto • Preventiva</p>
+</section>
+
+<section id="sobre" class="container">
+  <h2>Sobre</h2>
+  <p>Atendimento rápido e profissional</p>
+</section>
+
+<section id="contato" class="container" style="text-align:center;">
+  <h2>Contato</h2>
+  <a class="botao" href="https://wa.me/5511999999999" target="_blank">
+    Falar no WhatsApp
+  </a>
+</section>
+
+<script>
+  function toggleMenu() {
+    document.getElementById("menu").classList.toggle("active");
+  }
+</script>
 
 </body>
 </html>
